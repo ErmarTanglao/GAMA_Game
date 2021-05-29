@@ -9,6 +9,7 @@ public class CharController : MonoBehaviour
 
     Vector3 forward, right;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,9 @@ public class CharController : MonoBehaviour
 
     void Move()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        Vector3 rightMovement = right * movespeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-        Vector3 upMovement = forward * movespeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 rightMovement = right * movespeed * Time.deltaTime * Input.GetAxis("Horizontal");
+        Vector3 upMovement = forward * movespeed * Time.deltaTime * Input.GetAxis("Vertical");
 
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
