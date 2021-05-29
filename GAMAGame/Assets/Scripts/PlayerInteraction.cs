@@ -18,14 +18,13 @@ public class PlayerInteraction : MonoBehaviour
                 inventory.AddItem(currentInteractableObj);
             }
 
-
-
-            // if (currentInteractableObj.talks)
-            // {
-            //     Debug.Log("Talking Interaction");
-            //     //Tell the object to give its message
-            //     currentInteractableObj
-            // }
+            //Check to see if this object talks
+            if (currentInteractableObjScript.talks)
+            {
+                Debug.Log("Talking Interaction");
+                //Tell the object to give its message
+                currentInteractableObjScript.Talk();
+            }
         }
     }
     void OnTriggerEnter(Collider other) 

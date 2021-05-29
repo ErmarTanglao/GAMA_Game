@@ -13,4 +13,8 @@ public class Interactable : MonoBehaviour
         //Picked up and put in inventory
         gameObject.SetActive(false);
     }
+
+    public void Talk() {
+        Debug.Log(message);
+    }
 }
